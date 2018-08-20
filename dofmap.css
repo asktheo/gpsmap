@@ -1,0 +1,58 @@
+/* ol controls */
+ul.dofmap {
+  font-size:12pt;
+	text-align: left;
+ /* display: inline-block; */
+  margin: 0.5rem;
+  padding-left:0;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+ul.dofmap li {
+	/* display: inline-block; */
+  margin:0 0.3rem;
+  list-style-type: none;	
+}
+
+ul.dofmap li.active button{
+	/* display: inline; */
+	text-decoration: bolder;
+  opacity: 0.7;
+}
+
+ul.dofmap li button{
+	color: #000;
+  font-size: 0.9em;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  height: 1.6em;
+  width: 220px;
+  line-height: 1.2em;
+  border: 1px solid #fff;
+  border-radius: 0.3rem;	
+}
+
+ul.dofmap li.baselayers button{
+	background-color: #ddd;
+}
+
+ul.dofmap li.wmslayers button{
+  background-color: #000;
+  color:#fff;
+}
+
+/* Openlayers overrides */
+
+.ol-scale-line-inner{
+  background-color: rgba(0, 60, 136, 0.3);
+  color: #fff;
+  border-color: rgba(255,255,255, 1);
+  border-width: 2px;
+  font-weight: bolder;
+}
+
+.ol-attribution ul {
+    font-size:1.2rem
+}

@@ -1,0 +1,41 @@
+{
+  "name": "gpsmap",
+  "version": "1.0.0",
+  "description": "mapping gps records with OpenLayers 4 and jQuery",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "openlayers",
+    "jquery",
+    "tracking",
+    "cellular tracking technologies",
+    "ctt",
+    "gps",
+    "Birdlife",
+    "dof"
+  ],
+  "author": "Theo Askov",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "connect": "^3.6.6",
+    "font-awesome": "~4.7",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "~1.12",
+    "moment": "^2.18.1",
+    "openlayers": "^4.6.5",
+    "serve-static": "^1.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asktheo/gpsmap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asktheo/gpsmap/issues"
+  },
+  "homepage": "https://github.com/asktheo/gpsmap#readme"
+}
