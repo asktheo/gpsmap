@@ -1,5 +1,7 @@
 # Distribution
 dist
+.DS_Store
+.cache
 
 # Logs
 logs
