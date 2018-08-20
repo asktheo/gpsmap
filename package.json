@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
   },
   "keywords": [
     "openlayers",
@@ -20,6 +21,7 @@
   "author": "Theo Askov",
   "license": "MIT",
   "dependencies": {
+    "@types/ol": "^4.6.2",
     "bootstrap": "^3.3.7",
     "connect": "^3.6.6",
     "font-awesome": "~4.7",
@@ -27,7 +29,8 @@
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "~1.12",
     "moment": "^2.22.2",
-    "openlayers": "^4.6.5",
+    "ol": "^5.1.3",
+    "rbush": "^2.0.2",
     "serve-static": "^1.13.2"
   },
   "repository": {
@@ -37,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/asktheo/gpsmap/issues"
   },
-  "homepage": "https://github.com/asktheo/gpsmap#readme"
+  "homepage": "https://github.com/asktheo/gpsmap#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  }
 }

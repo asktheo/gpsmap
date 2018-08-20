@@ -1,5 +1,8 @@
+import "./import-jquery";
+import "jquery-ui-dist/jquery-ui.js";
+
 // Create a simple layer switcher in element div:
-var LayerSwitcher = function(options){
+let LayerSwitcher = function(options){
   var o = this.options = options || {};
   var map = this.map = options.map;
   var mapDiv = o.mapDiv || 'map_canvas'; 
@@ -68,3 +71,5 @@ var LayerSwitcher = function(options){
   layerGroups.hide();
   
 }; // LayerSwitcher
+
+export {LayerSwitcher}
