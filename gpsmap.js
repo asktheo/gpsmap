@@ -1,13 +1,12 @@
 const TIME_SLOTS = 24 * TIME_SLOTS_PER_HOUR;
 //get the local timezone as GMT +0?:00
-const TIMEZONE_OFFSET_HOURS = new Date().getTimezoneOffset() / -60;
+const TIMEZONE_OFFSET_HOURS = (IS_DEMO)? new Date(DEMO_DATE).getTimezoneOffset() / -60 : new Date().getTimezoneOffset() / -60;
 
 /* global variables */
 
-
 var features = []; //the ol.Feature's to be rendered
 var numAnimations = 1; //set to number of initially checked checkboxes. if equals 1 then animation pan to the position on every feature rendering
-var today = (IS_DEMO)? new moment(DEMO_DATE) : moment().add(DAYS_DIFF, 'days');
+var today = (IS_DEMO)? new moment(new Date(DEMO_DATE)) : moment().add(DAYS_DIFF, 'days');
 var timelabel = "0" + TIMEZONE_OFFSET_HOURS + ":00";
 var startTime, endTime;
 var startPos = 0;
@@ -65,7 +64,7 @@ var initMap = function (layers) {       /* OpenLayers 4 map */
                     SRS: MAP_PROJECTION,
                     FORMAT: 'image/png',
                     TILED: false,
-                    CQL_FILTER: "(unit_id=" + units[i].id + " AND gps_date>" + moment().add((DAYS_DIFF + DAYS_INTERVAL), 'days').format('YYYY-MM-DD') + ")" //start from now plus a negative number of days
+                    CQL_FILTER: "(unit_id=" + units[i].id + " AND gps_date>" + today.clone().add((DAYS_DIFF + DAYS_INTERVAL), 'days').format('YYYY-MM-DD') + ")" //start from now plus a negative number of days
                 }
             })        
         }));
@@ -126,7 +125,7 @@ var renderPosition = function (id, idx, delay) {
 
 var zoomToPositionForTime = function (time) {
     likeTime = time.format('HH');
-    var d = today.subtract(1, 'days').format('YYYY-MM-DD');
+    var d = today.clone().subtract(1, 'days').format('YYYY-MM-DD');
     return $.ajax({
         url: WFS_URL,
         data: {

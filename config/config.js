@@ -7,12 +7,12 @@ const UNIT2 = { "id": 2, "name": "Unge 2", "png": "eagle_head_2.svg" };
 var units = [UNIT1,UNIT2];
 
 const IS_DEMO = true;
-const DEMO_DATE = "20180814";
+const DEMO_DATE = "2018-08-14";
 
 //map config
-const WMS_URL = "http://geoserver:8080/geoserver/wms"; //service for showing background layer of gps observations
-const WFS_URL = "http://geoserver:8080/geoserver/demo/ows"; //service for getting recent gps observations
-const TICKETSERVICEURL = "http://localhost:8170/geo/ticket";  //need DOF's Java Service to get a ticket from Kortforsyningen
+const WMS_URL = "/geoserver/wms"; //service for showing background layer of gps observations
+const WFS_URL = "/geoserver/demo/ows"; //service for getting recent gps observations
+const TICKETSERVICEURL = "/geo/ticket";  //need DOF's Java Service to get a ticket from Kortforsyningen
 const MAP_PROJECTION = "EPSG:3857";
 const FEATURETYPE = "gps_oern"; //layer name for services   
 
