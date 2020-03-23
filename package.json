@@ -20,7 +20,7 @@
   "author": "Theo Askov",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "connect": "^3.6.6",
     "font-awesome": "~4.7",
     "jquery": "^3.4.0",
